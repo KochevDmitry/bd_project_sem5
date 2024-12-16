@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my_python_app
+    ports:
+      - "8501:8501" # Map container port 8000 to host port 8000 (adjust as needed)
+    volumes:
+      - .:/app # Mount local directory for development purposes
